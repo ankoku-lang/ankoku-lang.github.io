@@ -1,0 +1,10 @@
+[book]
+authors = ["elimerl"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Ankoku"
+
+[output.html.playground]
+runnable = false
+editable = true
