@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="examples.html"><strong aria-hidden="true">2.</strong> Examples</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">3.</strong> OOP</a></li><li class="chapter-item expanded "><a href="reference/index.html"><strong aria-hidden="true">4.</strong> Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="reference/functions.html"><strong aria-hidden="true">4.1.</strong> Function</a></li><li class="chapter-item expanded "><a href="reference/object.html"><strong aria-hidden="true">4.2.</strong> Object</a></li><li class="chapter-item expanded "><a href="reference/type.html"><strong aria-hidden="true">4.3.</strong> Type</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="examples.html"><strong aria-hidden="true">2.</strong> Examples</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">3.</strong> OOP</a></li><li class="chapter-item expanded "><a href="reference/index.html"><strong aria-hidden="true">4.</strong> Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="reference/function.html"><strong aria-hidden="true">4.1.</strong> Function</a></li><li class="chapter-item expanded "><a href="reference/object.html"><strong aria-hidden="true">4.2.</strong> Object</a></li><li class="chapter-item expanded "><a href="reference/type.html"><strong aria-hidden="true">4.3.</strong> Type</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -209,7 +209,7 @@ class Cow: Animal {
 		}
 	}
 }</code></pre>
-<p>but they actually desugar into:</p>
+<p>but they actually desugar into normal functions:</p>
 <pre><code class="language-rust ignore">fn Animal.make_sound(this) {
 	print(&quot;*crickets*&quot;);
 }
@@ -235,7 +235,7 @@ type Cow(Animal);
 fn Cow.new() {
 	Object.new(Cow) // create a new object of type Cow
 }</code></pre>
-<p><a href="./reference/object.html">Object</a> is at the top of the inheritance hierarchy and includes methods to create new objects.</p>
+<p><a href="./reference/object.html">Object</a> is at the top of the inheritance hierarchy and includes static methods to create new objects.</p>
 <p>Anyways, each object has a type:</p>
 <pre><code class="language-rust ignore">let object = {}; // empty object, desugars to Object.new(Object)
 
@@ -277,10 +277,10 @@ Animal.make_sound(cow); // prints &quot;*crickets*&quot;</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reference"><a class="header" href="#reference">Reference</a></h1>
 <p>This is an API reference for the built in types.</p>
 <ul>
-<li><a href="reference/./functions.html">Function</a></li>
+<li><a href="reference/./function.html">Function</a></li>
 <li><a href="reference/./object.html">Object</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="function"><a class="header" href="#function">Function</a></h1>
 <p>Functions are instances of the Function class, which is an FFI class and private. They expose a few methods, generally for making more functions.</p>
 <h2 id="functioncallthis-arguments"><a class="header" href="#functioncallthis-arguments"><code>Function.call(this, arguments)</code></a></h2>
 <p>Call this function with the specified arguments.</p>
