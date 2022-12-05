@@ -20,7 +20,7 @@ class Cow: Animal {
 }
 ```
 
-but they actually desugar into:
+but they actually desugar into normal functions:
 
 ```rust,ignore
 fn Animal.make_sound(this) {
@@ -55,7 +55,7 @@ fn Cow.new() {
 }
 ```
 
-[Object](./reference/object.md) is at the top of the inheritance hierarchy and includes methods to create new objects.
+[Object](./reference/object.md) is at the top of the inheritance hierarchy and includes static methods to create new objects.
 
 Anyways, each object has a type:
 

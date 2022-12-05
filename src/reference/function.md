@@ -1,4 +1,4 @@
-# Functions
+# Function
 
 Functions are instances of the Function class, which is an FFI class and private. They expose a few methods, generally for making more functions.
 
